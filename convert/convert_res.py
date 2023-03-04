@@ -1,6 +1,6 @@
 import pandas as pd
-def convert_outcome(url) -> pd.Series:
-    x = pd.read_html(url)[2].drop([1,3,5,7],axis=0).fillna(0).reset_index(drop=True)
+def convert_outcome(a: pd.DataFrame) -> pd.Series:
+    x = a.drop([1,3,5,7],axis=0).fillna(0).reset_index(drop=True)
     
     def split_result_percentage(q:pd.DataFrame, option, order): 
         if order ==0:
