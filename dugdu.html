@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game result</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1>Dropdown Boxes Example</h1>
+	
+	<form>
+		<label for="first-dropdown">First Dropdown:</label>
+		<select id="first-dropdown" name="first-dropdown">
+			<option value="option1">Option 1</option>
+			<option value="option2">Option 2</option>
+			<option value="option3">Option 3</option>
+			<option value="option4">Option 4</option>
+		</select>
+		
+		<label for="second-dropdown">Second Dropdown:</label>
+		<select id="second-dropdown" name="second-dropdown">
+			<option value="option1">Option 1</option>
+			<option value="option2">Option 2</option>
+			<option value="option3">Option 3</option>
+			<option value="option4">Option 4</option>
+		</select>
+		
+		<input type="button" value="Get Result" onclick="getResult()">
+	</form>
+	
+	<div id="result"></div>
+	
+	<script>
+		function getResult() {
+			var firstDropdownValue = document.getElementById("first-dropdown").value;
+			var secondDropdownValue = document.getElementById("second-dropdown").value;
+			var result = firstDropdownValue + " " + secondDropdownValue;
+			document.getElementById("result").innerHTML = result;
+		}
+	</script>
+</body>
+</html>
